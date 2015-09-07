@@ -63,7 +63,7 @@ mkdir -p $CACHE_DIR
 echo "Vendoring R $R_VERSION for $STACK stack ($BUILD_PACK_VERSION)" | indent
 
 # download and unpack binaries
-echo "Downloading and unpacking R binaries! ($R_BINARIES)" | indent
+echo "Downloading and unpacking R binaries ($R_BINARIES)" | indent
 curl $R_BINARIES -s -o - | tar xzf - -C $BUILD_DIR
 
 # need to copy the binaries to /app/vendor so that R works when compiling packages
@@ -73,8 +73,6 @@ cp -R $VENDOR_DIR/.apt/* /app/.apt
 
 #mkdir -p /app/vendor/R
 #cp -R $VENDOR_DIR/R/* /app/vendor/R
-
-sudo ln -s /lib/i386-linux-gnu/libc.so.6 /lib/libc.so.6
 
 # needed for compiling packages
 export PATH="/app/vendor/R/bin:/app/.apt/usr/bin:/app/bin:/usr/ruby1.9.2/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
