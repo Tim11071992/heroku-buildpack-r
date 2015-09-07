@@ -63,7 +63,7 @@ mkdir -p $CACHE_DIR
 echo "Vendoring R $R_VERSION for $STACK stack ($BUILD_PACK_VERSION)" | indent
 
 # download and unpack binaries
-echo "Downloading and unpacking R binaries ($R_BINARIES)" | indent
+echo "Downloading and unpacking R binaries! ($R_BINARIES)" | indent
 curl $R_BINARIES -s -o - | tar xzf - -C $BUILD_DIR
 
 # need to copy the binaries to /app/vendor so that R works when compiling packages
