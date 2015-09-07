@@ -37,6 +37,8 @@ BUILDPACK_DIR="$(dirname $(dirname $0))"
 
 # config
 
+ls "/lib"
+
 # read in R version if file exists
 if [[ -f $BUILD_DIR/.r-version ]]; then
   R_VERSION=`read_var $BUILD_DIR/.r-version`
