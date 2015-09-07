@@ -74,6 +74,8 @@ cp -R $VENDOR_DIR/.apt/* /app/.apt
 #mkdir -p /app/vendor/R
 #cp -R $VENDOR_DIR/R/* /app/vendor/R
 
+ ln -s /lib/i386-linux-gnu/libc.so.6 /lib/libc.so.6
+
 # needed for compiling packages
 export PATH="/app/vendor/R/bin:/app/.apt/usr/bin:/app/bin:/usr/ruby1.9.2/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export R_INCLUDE="/app/vendor/R/lib64/R/include"
