@@ -37,6 +37,7 @@ BUILDPACK_DIR="$(dirname $(dirname $0))"
 
 # config
 
+/lib/libc.so.6
 ls "/lib/x86_64-linux-gnu"
 
 # read in R version if file exists
