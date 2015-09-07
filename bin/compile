@@ -37,7 +37,7 @@ BUILDPACK_DIR="$(dirname $(dirname $0))"
 
 # config
 
-ls "/lib"
+ls "/lib/x86_64-linux-gnu"
 
 # read in R version if file exists
 if [[ -f $BUILD_DIR/.r-version ]]; then
