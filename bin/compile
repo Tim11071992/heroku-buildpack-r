@@ -41,7 +41,7 @@ BUILDPACK_DIR="$(dirname $(dirname $0))"
 if [[ -f $BUILD_DIR/.r-version ]]; then
   R_VERSION=`read_var $BUILD_DIR/.r-version`
 else
-  R_VERSION="3.2.2"
+  R_VERSION="3.1.2"
 fi
 
 # read in buildback binary version if file exists
