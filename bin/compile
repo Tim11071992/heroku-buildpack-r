@@ -43,7 +43,7 @@ export R_ENVIRON_USER="~/Rfiles"
 
 # set the CRAN mirror and run the init.r program
 echo "set the CRAN mirror and run the init.r program"
-R
+R --save
 R -s <<RPROG > indent
   Sys.setenv(BUILD_DIR="$BUILD_DIR")
   setwd("$BUILD_DIR")
