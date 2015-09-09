@@ -104,10 +104,10 @@ tar zxf glibc-2.22.tar.gz
 # ./$JRE_ARHIVE
 rm glibc-2.22.tar.gz
 ls
-GCC_DIR=$VENDOR_DIR/$(ls -l | tr " " "\n" | grep jre)
+GCC_DIR=$VENDOR_DIR/glibc-2.22
 echo "GCC_DIR=$GCC_DIR"
-mv $GCC_DIR jre
-cd ..
+#mv $GCC_DIR jre
+#cd ..
 
 # install dependencies from CRAN
 echo "Executing init.r script" | indent
