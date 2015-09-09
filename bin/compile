@@ -72,10 +72,10 @@ tar zxf "R-${R_VERSION}-binaries-${BUILD_PACK_VERSION}.tar.gz"
 # need to copy the binaries to /app/vendor so that R works when compiling packages
 
 mkdir -p /app/.apt
-cp -R $VENDOR_DIR/.apt/* /app/.apt
+cp -R vendor/.apt/* /app/.apt
 
 mkdir -p /app/vendor/R
-cp -R $VENDOR_DIR/R/* /app/vendor/R
+cp -R vendor/R/* /app/vendor/R
 
 ls /app/vendor
 
