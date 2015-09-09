@@ -102,6 +102,7 @@ touch /app/vendor/R/lib64/R/doc/html/R.css
 echo "Executing init.r script" | indent
 
 ls
+ls app
 
 # set the CRAN mirror and run the init.r program
 /app/vendor/R/bin/R -s <<RPROG > indent
