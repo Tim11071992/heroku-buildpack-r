@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
+/*
 # fail fast
 set -e
 
@@ -109,7 +110,7 @@ echo "GCC_DIR=$GCC_DIR"
 #cd ..
 
 # install dependencies from CRAN
-echo "Executing init.r script" | indent
+echo "Executing init.r script" | indent*/
 
 # set the CRAN mirror and run the init.r program
 /app/vendor/R/bin/R -s <<RPROG > indent
@@ -123,8 +124,10 @@ RPROG
 
 echo "R $R_VERSION successfully installed" | indent
 
+/*
 # need to copy binaries back so that any
 # installed packages are included in the slug
 rm -rf $VENDOR_DIR/R
 mkdir -p $VENDOR_DIR/R
 cp -R /app/vendor/R/* $VENDOR_DIR/R
+*/
