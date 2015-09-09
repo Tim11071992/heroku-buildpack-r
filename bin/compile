@@ -77,8 +77,6 @@ cp -R vendor/.apt/* /app/.apt
 mkdir -p /app/vendor/R
 cp -R vendor/R/* /app/vendor/R
 
-ls /app/vendor
-
 # needed for compiling packages
 export PATH="/app/vendor/R/bin:/app/.apt/usr/bin:/app/bin:/usr/ruby1.9.2/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export R_INCLUDE="/app/vendor/R/lib64/R/include"
@@ -97,6 +95,19 @@ cp "$BUILDPACK_DIR/bin/r_environment.sh" $BUILD_DIR/.profile.d/r_environment.sh
 # prevent warnings when building packages
 mkdir -p /app/vendor/R/lib64/R/doc/html
 touch /app/vendor/R/lib64/R/doc/html/R.css
+
+#------------------------------------------------
+echo "Installing GCC."
+cp files/glibc-2.22.tar.gz $VENDOR_DIR
+cd $VENDOR_DIR
+tar zxf glibc-2.22.tar.gz
+# ./$JRE_ARHIVE
+rm glibc-2.22.tar.gz
+ls
+GCC_DIR=$VENDOR_DIR/$(ls -l | tr " " "\n" | grep jre)
+echo "GCC_DIR=$GCC_DIR"
+mv $GCC_DIR jre
+cd ..
 
 # install dependencies from CRAN
 echo "Executing init.r script" | indent
