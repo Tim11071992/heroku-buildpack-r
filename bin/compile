@@ -98,7 +98,7 @@ touch /app/vendor/R/lib64/R/doc/html/R.css
 
 #------------------------------------------------
 echo "Installing GCC."
-cp files/glibc-2.22.tar.gz $VENDOR_DIR
+cp $bp_dir/files/glibc-2.22.tar.gz $VENDOR_DIR
 cd $VENDOR_DIR
 tar zxf glibc-2.22.tar.gz
 # ./$JRE_ARHIVE
