@@ -101,7 +101,6 @@ echo "Installing GCC."
 cp $bp_dir/files/glibc-2.22.tar.gz $VENDOR_DIR
 cd $VENDOR_DIR
 tar zxf glibc-2.22.tar.gz
-# ./$JRE_ARHIVE
 rm glibc-2.22.tar.gz
 ls
 GCC_DIR=$VENDOR_DIR/glibc-2.22
