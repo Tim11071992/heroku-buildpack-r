@@ -36,6 +36,8 @@ bp_dir=$(cd $(dirname $0); cd ..; pwd)
 VENDOR_DIR=$BUILD_DIR/vendor
 BUILDPACK_DIR="$(dirname $(dirname $0))"
 
+R
+
 CRAN_MIRROR="http://cran.revolutionanalytics.com"
 
 # set the CRAN mirror and run the init.r program
