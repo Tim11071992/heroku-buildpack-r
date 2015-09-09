@@ -40,7 +40,7 @@ CRAN_MIRROR="http://cran.revolutionanalytics.com"
 
 # set the CRAN mirror and run the init.r program
 echo "set the CRAN mirror and run the init.r program"
-/R -s <<RPROG > indent
+R -s <<RPROG > indent
   Sys.setenv(BUILD_DIR="$BUILD_DIR")
   setwd("$BUILD_DIR")
   r <- getOption("repos");
