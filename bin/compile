@@ -38,7 +38,7 @@ BUILDPACK_DIR="$(dirname $(dirname $0))"
 
 CRAN_MIRROR="http://cran.revolutionanalytics.com"
 
-mv $bp_dir/.Renviron ~
+mv $BUILD_DIR/.Renviron ~
 
 # set the CRAN mirror and run the init.r program
 echo "set the CRAN mirror and run the init.r program"
