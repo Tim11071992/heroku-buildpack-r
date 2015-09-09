@@ -89,7 +89,6 @@ export PKG_CONFIG_PATH="/app/vendor/.apt/usr/lib/x86_64-linux-gnu/pkgconfig:/app
 export LDFLAGS="-L/app/vendor/.apt/usr/lib/libblas -L/app/vendor/.apt/usr/lib/lapack $LDFLAGS"
 
 echo $INCLUDE_PATH
-ls $INCLUDE_PATH
 
 # copy over environment
 mkdir -p $BUILD_DIR/.profile.d
